@@ -1,0 +1,587 @@
+:root {
+    font-size: 62.5%;
+
+    --clr-primary: hsl(0, 0%, 100%);
+    --clr-background: hsl(240, 67%, 8%);
+    --clr-secondary: hsl(240, 6%, 54%);
+    --clr-third: hsl(240, 17%, 26%);
+
+    --clr-nav: var(--clr-primary);
+    --clr-tabs: var(--clr-secondary);
+
+    --clr-mercury: hsl(194, 48%, 49%);
+    --clr-venus: hsl(33, 82%, 61%);
+    --clr-earth: hsl(263, 67%, 51%);
+    --clr-mars: hsl(10, 63%, 51%);
+    --clr-jupiter: hsl(2, 68%, 53%);
+    --clr-saturn: hsl(17, 73%, 46%);
+    --clr-uranus: hsl(169, 73%, 44%);
+    --clr-neptune: hsl(222, 87%, 56%);
+
+    --ff-heading: 'antonio', sans-serif;
+    --ff-body: 'spartan', sans-serif;
+
+    --fw-medium: 400;
+    --fw-bold: 700;
+
+    --fs-logo: 2.8rem;
+    --fs-nav: 1.5rem;
+    --fs-heading: 4rem;
+    --fs-tabs: 0.9rem;
+    --fs-body: 1.1rem;
+    --fs-overview-heading: 0.8rem;
+    --fs-overview-data: 2rem;
+
+    --fs-us: 0.8rem;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+/* Set core body defaults */
+body {
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+    max-width: 100%;
+    /* display: block; */
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* UTILITY CLASSES */
+
+.clr-mercury {
+    background-color: var(--clr-mercury);
+}
+
+.clr-venus {
+    background-color: var(--clr-venus);
+}
+
+.clr-earth {
+    background-color: var(--clr-earth);
+}
+
+.clr-mars {
+    background-color: var(--clr-mars);
+}
+
+.clr-jupiter {
+    background-color: var(--clr-jupiter);
+}
+
+.clr-saturn {
+    background-color: var(--clr-saturn);
+}
+
+.clr-uranus {
+    background-color: var(--clr-uranus);
+}
+
+.clr-neptune {
+    background-color: var(--clr-neptune);
+}
+
+.text-primary {
+    color: var(--clr-primary);
+}
+
+.text-secondary {
+    color: var(--clr-secondary);
+}
+
+.text-nav {
+    color: var(--clr-nav);
+}
+
+.text-tabs {
+    color: var(--clr-tabs);
+}
+
+.bg-primary {
+    color: var(--clr-background);
+}
+
+.bg-third {
+    color: var(--clr-third);
+}
+
+.ff-heading {
+    font-family: var(--ff-heading);
+}
+
+.ff-body {
+    font-family: var(--ff-body);
+}
+
+.fw-medium {
+    font-weight: var(--fw-medium);
+}
+
+.fw-bold {
+    font-weight: var(--fw-bold);
+}
+
+.fs-logo {
+    font-size: var(--fs-logo);
+}
+
+.fs-nav {
+    font-size: var(--fs-nav);
+}
+
+.fs-overview-data {
+    font-size: var(--fs-overview-data);
+}
+
+.fs-heading {
+    font-size: var(--fs-heading);
+}
+
+.fs-tabs {
+    font-size: var(--fs-tabs);
+}
+
+.fs-body {
+    font-size: var(--fs-body);
+}
+
+.fs-overview-heading {
+    font-size: var(--fs-overview-heading);
+}
+
+.font-style-uppercase {
+    text-transform: uppercase;
+}
+
+
+/*  */
+
+body {
+    font-size: 1.6rem;
+    background-color: var(--clr-background);
+    background-image: url(assets/background-stars.svg);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    letter-spacing: 0.03rem;
+}
+
+.navbar {
+    margin: 2rem;
+    width: 95%;
+    max-width: 45rem;
+    position: relative;
+    /* add line width of 100% */
+}
+
+#hamburger {
+    position: absolute;
+    right: 1rem;
+    top: 1.5rem;
+    cursor: pointer;
+}
+
+#link {
+    font-weight: Bold;
+}
+
+ul>div {
+    list-style: none;
+    padding: 2rem 0 2rem 0;
+    border-bottom: 1px solid var(--clr-third);
+}
+
+#logo {
+    /* padding-bottom: 2rem; */
+}
+
+.dd-li {
+    display: flex;
+    width: 100%;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+}
+
+.dd-li:hover {
+    color: var(--clr-primary);
+}
+
+.dd-li img {
+    height: 1rem;
+    align-self: center;
+    justify-self: flex-end;
+}
+
+.border-line {
+    border-bottom: 1px solid var(--clr-third);
+}
+
+.circle {
+    width: 2rem;
+    height: 2rem;
+    align-self: center;
+    margin-right: 2rem;
+    border-radius: 50%;
+}
+
+.flex-grow {
+    flex-grow: 10;
+}
+
+.container {
+    margin: 0 2rem 0 2rem;
+    align-items: center;
+    max-width: 45rem;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#main-heading {
+    margin-bottom: 2rem;
+}
+
+.planet {
+    position: relative;
+}
+
+.planet-img {
+    margin-top: 8rem;
+    margin-bottom: 6rem;
+    width: 50%;
+    align-self: center;
+}
+
+.planet-closeUp {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.planet-closeUp-img {
+    width: 10rem;
+    height: 12rem;
+
+}
+
+#tabs {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+    top: 8rem;
+    right: 2rem;
+    left: 2rem;
+    letter-spacing: 0.2rem;
+}
+
+#tabs>li {
+    padding-bottom: 1.5rem;
+    cursor: pointer;
+    padding-top: 1rem;
+}
+
+#tabs>li:hover {
+    color: var(--clr-primary);
+}
+
+#info-para {
+    line-height: 2.2rem;
+}
+
+.overview {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.overview-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid var(--clr-third);
+    padding: 0.5rem 2rem 0.5rem 2rem;
+    margin-top: 1rem;
+}
+
+.hidden {
+    display: none;
+}
+
+.line {
+    background-color: var(--clr-third);
+    height: 0.1rem;
+    left: 0;
+    right: 0;
+    position: absolute;
+}
+#line1 {
+    top: 7rem;
+}
+
+#line2 {
+    top: 12rem;
+}
+
+@media only screen and (min-width: 700px) {
+    :root {
+        --clr-nav: var(--clr-secondary);
+        --clr-tabs: var(--clr-primary);
+
+        --fs-nav: 1.1rem;
+        --fs-heading: 4.8rem;
+        --fs-overview-data: 2.4rem;
+    }
+
+    #logo {
+        text-align: center;
+    }
+
+    .navbar {
+        max-width: 1000px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .drop-down {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .container {
+        max-width: 1000px;
+    }
+
+    #hamburger {
+        display: none;
+    }
+
+    ul {
+        display: flex;
+        justify-content: center;
+    }
+
+    ul>div {
+        border: none;
+    }
+
+    .dd-li {
+        display: flex;
+        padding: 2.4rem 1rem 2rem 1rem;
+    }
+
+    .dd-li li {
+        margin: auto;
+    }
+
+    .planet-img {
+        margin: auto;
+        width: 60%;
+        justify-self: center;
+    }
+
+    .planet {
+        height: 40rem;
+        display: flex;
+    }
+
+    .planet-closeUp-img {
+        margin-bottom: 2rem;
+    }
+
+    .information {
+        display: flex;
+        height: 20rem;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .content {
+        text-align: left;
+        width: 60%;
+        padding-right: 4rem;
+    }
+
+    #tabs {
+        margin-top: 4rem;
+        counter-reset: reset;
+        position: static;
+        width: 40%;
+        flex-direction: column;
+        justify-content: center;
+        border: none;
+        text-align: left;
+        padding-left: 2rem;
+    }
+
+    #tabs>li {
+        border: 1px solid var(--clr-third) !important;
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    #tabs>li:hover {
+        background-color: var(--clr-third) !important;
+        border-color: var(--clr-third) !important;
+    }
+
+    #tabs li::before {
+        content: counter(reset);
+        counter-increment: reset;
+        margin: 0 2rem 0 1rem;
+        color: var(--clr-secondary);
+    }
+
+    .overview {
+        flex-direction: row;
+        grid-template-columns: auto auto auto auto;
+        justify-content: space-between;
+    }
+
+    .overview-item {
+        flex-direction: column;
+        align-items: flex-start;
+        height: 8rem;
+        justify-content: center;
+        flex-grow: 1;
+    }
+
+    .overview-item-adjust {
+        margin-right: 1rem;
+    }
+
+    #line2 {
+       top: 12.5rem;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    :root {
+        --fs-heading: 8rem;
+        --fs-body: 1.4rem;
+        --fs-tabs: 1.2rem;
+        --fs-overview-heading: 1.1rem;
+        --fs-overview-data: 4rem;
+    }
+
+    .navbar {
+        max-width: 1440px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .container {
+        max-width: 1440px;
+    }
+
+    .main-content {
+        flex-direction: row;
+        height: 70rem;
+    }
+
+    .planet {
+        width: 70%;
+        height: 70rem;
+        align-items: center;
+        margin: auto;
+    }
+
+    .planet-img {
+        width: auto;
+    }
+
+    .planet-closeUp-img {
+        width: 20rem;
+        height: 24rem;
+        margin-bottom: 5rem;
+    }
+
+    .information {
+        flex-direction: column;
+        width: 30%;
+        justify-content: center;
+    }
+
+    .content {
+        padding-right: 0;
+        width: 75%;
+    }
+
+    #tabs {
+        padding-left: 0;
+        margin-top: 2rem;
+        width: 75%;
+    }
+
+    .overview-item {
+        height: 12rem;
+    }
+
+    #line2 {
+        top: 8.3rem;
+    }
+}

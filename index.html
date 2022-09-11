@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet" href="index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@400;700&family=League+Spartan&display=swap"
+    rel="stylesheet">
+
+
+  <title>Frontend Mentor | Planets fact site</title>
+</head>
+
+<body>
+  <nav class="navbar">
+    <div id="logo" class="ff-heading fw-medium fs-logo font-style-uppercase text-primary">The Planets</div>
+    <a id="hamburger" class="">
+      <img id="handburger" src="assets/icon-hamburger.svg">
+    </a>
+    <ul id="drop-down" class="ff-body fw-bold fs-nav font-style-uppercase text-nav">
+      <div class="dd-li border-line">
+        <div class="circle clr-mercury"></div>
+        <li>Mercury</li>
+        <div class="flex-grow"></div>
+        <img class="chevron" src="assets/icon-chevron.svg">
+      </div>
+      <div class="dd-li border-line">
+        <div class="circle clr-venus"></div>
+        <li>Venus</li>
+        <div class="flex-grow"></div>
+        <img class="chevron" src="assets/icon-chevron.svg">
+      </div>
+      <div class="dd-li border-line">
+        <div class="circle clr-earth"></div>
+        <li>Earth</li>
+        <div class="flex-grow"></div>
+        <img class="chevron" src="assets/icon-chevron.svg">
+      </div>
+      <div class="dd-li border-line">
+        <div class="circle clr-mars"></div>
+        <li>Mars</li>
+        <div class="flex-grow"></div>
+        <img class="chevron" src="assets/icon-chevron.svg">
+      </div>
+      <div class="dd-li border-line">
+        <div class="circle clr-jupiter"></div>
+        <li>Jupiter</li>
+        <div class="flex-grow"></div>
+        <img class="chevron" src="assets/icon-chevron.svg">
+      </div>
+      <div class="dd-li border-line">
+        <div class="circle clr-saturn"></div>
+        <li>Saturn</li>
+        <div class="flex-grow"></div>
+        <img class="chevron" src="assets/icon-chevron.svg">
+      </div>
+      <div class="dd-li border-line">
+        <div class="circle clr-uranus"></div>
+        <li>Uranus</li>
+        <div class="flex-grow"></div>
+        <img class="chevron" src="assets/icon-chevron.svg">
+      </div>
+      <div class="dd-li border-line">
+        <div class="circle clr-neptune"></div>
+        <li>Neptune</li>
+        <div class="flex-grow"></div>
+        <img class="chevron" src="assets/icon-chevron.svg">
+      </div>
+    </ul>
+    <span class="hidden" id=""></span>
+  </nav>
+  <main class="container">
+    <section class="main-content">
+      <div class="planet">
+        <img class="planet-img" src="assets/planet-earth.svg">
+        <div class="hidden planet-closeUp">
+          <img class="planet-closeUp-img" src="assets/geology-earth.png">
+        </div>
+      </div>
+      <section class="information">
+        <div class="content">
+          <h1 id="main-heading" class="ff-heading fw-medium fs-heading font-style-uppercase text-primary">Earth</h1>
+          <p id="info-para" class="ff-body fw-medium fs-body text-secondary">
+          </p>
+          <span class="ff-body fw-medium fs-body text-secondary">Source: <a id="link" class="text-secondary">Wikipedia <img src="assets/Shape.png"></a></span>
+        </div>
+        <ol id="tabs" class="ff-body fw-bold fs-tabs text-tabs font-style-uppercase">
+          <li>Overview</li>
+          <li>Internal Structure</li>
+          <li>Surface Geology</li>
+        </ol>
+      </section>
+    </section>
+    <section class="overview">
+      <div id="rotation" class="overview-item overview-item-adjust">
+        <h3 class="ff-body fw-bold fs-overview-heading text-secondary font-style-uppercase">Rotation Time</h3>
+        <h2 class="ff-heading fw-medium fs-overview-data font-style-uppercase text-primary"></h2>
+      </div>
+      <div id="revolution" class="overview-item overview-item-adjust">
+        <h3 class="ff-body fw-bold fs-overview-heading text-secondary font-style-uppercase">Revolution Time</h3>
+        <h2 class="ff-heading fw-medium fs-overview-data font-style-uppercase text-primary"></h2>
+      </div>
+      <div id="radius" class="overview-item overview-item-adjust">
+        <h3 class="ff-body fw-bold fs-overview-heading text-secondary font-style-uppercase">Radius</h3>
+        <h2 class="ff-heading fw-medium fs-overview-data font-style-uppercase text-primary"></h2>
+      </div>
+      <div id="temp" class="overview-item">
+        <h3 class="ff-body fw-bold fs-overview-heading text-secondary font-style-uppercase">Average Temp</h3>
+        <h2 class="ff-heading fw-medium fs-overview-data font-style-uppercase text-primary"></h2>
+      </div>
+    </section>
+  </main>
+  <span id="line1" class="line"></span>
+  <span id="line2" class="line"></span>
+</body>
+<script src="index.js"></script>
+
+</html>
